@@ -2,7 +2,7 @@ const app = Vue.createApp({
     mixins: Object.values(mixins),
     data() {
         return {
-            loading: true,
+            loading: false,
             showMenu: false,
             barLocal: 0,
             renderers: [],
