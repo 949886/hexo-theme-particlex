@@ -3,8 +3,10 @@ const app = Vue.createApp({
     data() {
         return {
             loading: false,
-            showMenu: false,
-            barLocal: 0,
+            hiddenMenu: false,
+            showMenuItems: false,
+            menuColor: false,
+            scrollTop: 0,
             renderers: [],
         };
     },
@@ -19,24 +21,22 @@ const app = Vue.createApp({
     },
     methods: {
         render() {
-            if (typeof this.renderers === "undefined") return;
             for (let i of this.renderers) i();
         },
         handleScroll() {
-            let menu = this.$refs.menu,
-                wrap = this.$refs.homePostsWrap;
-            let newlocal = document.documentElement.scrollTop;
-            if (this.barLocal < newlocal) {
-                this.showMenu = false;
-                menu.classList.add("hidden");
-            } else menu.classList.remove("hidden");
+            let wrap = this.$refs.homePostsWrap;
+            let newScrollTop = document.documentElement.scrollTop;
+            if (this.scrollTop < newScrollTop) {
+                this.hiddenMenu = true;
+                this.showMenuItems = false;
+            } else this.hiddenMenu = false;
             if (wrap) {
-                if (newlocal <= window.innerHeight - 100) menu.classList.add("menu-color");
-                else menu.classList.remove("menu-color");
-                if (newlocal <= 400) wrap.style.marginTop = -newlocal / 5 + "px";
-                else wrap.style.marginTop = "-80px";
+                if (newScrollTop <= window.innerHeight - 100) this.menuColor = true;
+                else this.menuColor = false;
+                if (newScrollTop <= 400) wrap.style.top = "-" + newScrollTop / 5 + "px";
+                else wrap.style.top = "-80px";
             }
-            this.barLocal = newlocal;
+            this.scrollTop = newScrollTop;
         },
     },
 });

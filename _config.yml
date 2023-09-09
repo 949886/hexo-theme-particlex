@@ -1,5 +1,5 @@
 # ParticleX Configuration
-# https://github.com/argvchs/hexo-theme-particlex
+# https://github.com/theme-particlex/hexo-theme-particlex
 
 # Avatar image
 avatar: /images/avatar.png
@@ -8,10 +8,22 @@ avatar: /images/avatar.png
 headBlockEnable: true
 
 # Home page background image
-background: /images/bg1.jpg
+background:
+    - /images/bg1.jpg
+
+# Loading image
+loading: /images/loading.gif
+
+# Optional colors for category and tag
+colors:
+    - "#ffa2c4"
+    - "#00bcd4"
+    - "#03a9f4"
+    - "#00a596"
+    - "#ff7d73"
 
 # ParticleX theme icon is adopts the Font Awesome 6
-# https://fontawesome.com/search
+# https://fontawesome.com
 
 # Main menu navigation
 menu:
@@ -35,10 +47,6 @@ menu:
         name: tags
         theme: solid
         link: /tags
-    # <name>:
-    #     name: <icon-name>
-    #     theme: <icon-theme>
-    #     link: <link-url>
 
 # Side info card
 card:
@@ -47,14 +55,8 @@ card:
         咱的小窝
         ...
     iconLinks:
-        {}
-        # <name>:
-        #    name: <icon-name>
-        #    theme: <icon-theme>
-        #    link: <link-url>
     friendLinks:
-        {}
-        # <name>: <link-url>
+        Argvchs: https://argvchs.github.io
 
 # Footer info
 footer:
@@ -66,7 +68,7 @@ footer:
         link:
 
 # Polyfill
-# https://polyfill.io/v3/url-builder
+# https://polyfill.io
 polyfill:
     enable: true
     features:
@@ -78,11 +80,11 @@ highlight:
     enable: true
     style: github
 
-# Rendering math with KaTeX
+# KaTeX math rendering
 math:
     enable: false
 
-# Image Preview
+# Image preview
 preview:
     enable: true
 
@@ -127,7 +129,7 @@ giscus:
     emitMetadata: 0
     inputPosition: bottom
     theme: preferred_color_scheme
-    lang: zh-CN
+    lang:
 
 # Waline
 # https://github.com/walinejs/waline
@@ -135,9 +137,6 @@ waline:
     enable: false
     serverURL: # Waline server address url, you should set this to your own link
     locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
-        {}
-        # e.g.:
-        # placeholder: Leave a comment
     commentCount: true # If false, comment count will only be displayed in post page, not in home page
     pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
     emoji: # Custom emoji
@@ -153,7 +152,7 @@ waline:
         - link
     requiredMeta: # Set required meta field, e.g.: [nick] | [nick, mail]
         - nick
-    lang: zh-CN # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
+    lang: # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
     wordLimit: 0 # Word limit, no limit when setting to 0
     login: enable # Whether enable login, can choose from 'enable', 'disable' and 'force'
     pageSize: 10 # Comment per page
@@ -165,4 +164,4 @@ twikoo:
     envID:
     region:
     path: location.pathname
-    lang: zh-CN
+    lang:
