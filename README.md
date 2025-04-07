@@ -2,7 +2,7 @@
 
 [ParticleX](https://github.com/theme-particlex/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很好的。
 
-原来用的是 Vue 2 + Ant Design Vue 1，现更新到 Vue 3，去除 Ant Design Vue 采用自定义样式，图标更改为 Font Awesome 6，CDN 改为 Staticfile。
+原来用的是 Vue 2 + Ant Design Vue 1，现更新到 Vue 3，去除 Ant Design Vue 采用自定义样式，图标更改为 Font Awesome 6，CDN 改为 ZStatic。
 
 原项目 `README.md` 里说：
 
@@ -38,6 +38,12 @@ highlight:
     enable: false
 prismjs:
     enable: false
+```
+
+如果使用 Hexo 7.0.0 之后的版本只需要修改为：
+
+```yaml
+syntax_highlighter:
 ```
 
 如果使用 Pandoc 还需要设置一下：
@@ -166,6 +172,8 @@ footer:
 
 可以配合 [Hexo-Babel](https://github.com/theme-particlex/hexo-babel) 插件处理 JS 语法兼容。
 
+Polyfill 在国内一些省份被墙，这里换成了阿里的 [Polyfill](https://polyfill.alicdn.com)。
+
 ```yaml
 # Polyfill
 # https://polyfill.io
@@ -250,14 +258,14 @@ search:
 
 ## 3.4. 评论配置
 
-### 3.4.1. Giscus
+### 3.4.1. giscus
 
-Giscus 是一个由 GitHub Discussions 支持的评论系统。
+giscus 是一个由 GitHub Discussions 支持的评论系统。
 
-在 [Giscus.app](https://giscus.app) 设置好各项后，会在下面生成一个 `<script>` 标签，在主题内填入即可。
+在 [giscus.app](https://giscus.app) 设置好各项后，会在下面生成一个 `<script>` 标签，在主题内填入即可。
 
 ```yaml
-# Giscus
+# giscus
 # https://github.com/giscus/giscus
 giscus:
     enable: false

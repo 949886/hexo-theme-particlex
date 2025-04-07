@@ -108,6 +108,23 @@ crypto:
 search:
     enable: false
 
+# Giscus
+# https://github.com/giscus/giscus
+giscus:
+    enable: false
+    src: https://giscus.app/client.js
+    repo:
+    repoID:
+    category:
+    categoryID:
+    mapping: pathname
+    strict: 0
+    reactionsEnabled: 1
+    emitMetadata: 0
+    inputPosition: bottom
+    theme: preferred_color_scheme
+    lang:
+
 # Gitalk
 # https://github.com/gitalk/gitalk
 gitalk:
@@ -125,23 +142,6 @@ gitalk:
         # <www.example.com>:
         #    clientID: <client-id>
         #    clientSecret: <client-secret>
-
-# Giscus
-# https://github.com/giscus/giscus
-giscus:
-    enable: false
-    src: https://giscus.app/client.js
-    repo:
-    repoID:
-    category:
-    categoryID:
-    mapping: pathname
-    strict: 0
-    reactionsEnabled: 1
-    emitMetadata: 0
-    inputPosition: bottom
-    theme: preferred_color_scheme
-    lang:
 
 # Waline
 # https://github.com/walinejs/waline
