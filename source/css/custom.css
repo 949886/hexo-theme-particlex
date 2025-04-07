@@ -1,0 +1,27 @@
+img[alt~="-|"], img[alt~="fr"] {
+    float: right;
+  }
+  
+  img[alt~="|-"], img[alt~="fl"] {
+    float: left;
+  }
+  
+  img[alt~="|-|"] {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    float: none!important;
+  }
+
+  img[alt~="inline"] {
+    display: inline;
+    margin: 0px auto;
+  }
+  
+  iframe[title="YouTube video player"] {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    aspect-ratio: 16/9;
+  }
